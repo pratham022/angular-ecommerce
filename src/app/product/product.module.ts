@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ProductItemComponent } from './product-item/product-item.component';
     ProductItemComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatButtonModule,
   ],
   exports: [
     ProductListComponent
