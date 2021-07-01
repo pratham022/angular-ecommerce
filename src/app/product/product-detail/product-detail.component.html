@@ -1,0 +1,10 @@
+<div class="card-container">
+    <div class="card">
+        <img src="{{ product.image }}">
+        <p>{{ product.name }}</p>
+        <p>Brand: {{ product.brand }}</p>
+        <p>Info: {{ product.description.substring(0, 45) }}...</p>
+        <p>Category: {{ product.category }}</p>
+        <h4>Price:  $ {{ product.price }}</h4>
+    </div>
+</div>

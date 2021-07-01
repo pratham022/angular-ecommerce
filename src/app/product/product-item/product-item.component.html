@@ -2,7 +2,7 @@
     <img src="{{ item.image }}">
     <p>{{ item.name }}</p>
     <p>{{ item.brand }}</p>
-    <button mat-raised-button color="primary">Details</button>
+    <a mat-raised-button color="primary" [routerLink]="['detail', item._id]">Details</a>
 </div>
 
 
