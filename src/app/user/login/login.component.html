@@ -1,0 +1,12 @@
+<div class="form-wrapper">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+        <h1>Login</h1>
+        <div class="form-input-material">
+          <input type="text" formControlName="username" id="username" placeholder="Username"  class="form-control-material" />
+        </div>
+        <div class="form-input-material">
+          <input type="password" formControlName="password" id="password" placeholder="Password"  class="form-control-material" />
+        </div>
+        <button type="submit" mat-raised-button color="primary">Login</button>
+    </form>
+</div>

@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ProductRoutingModule } from './product-routing.module';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { from } from 'rxjs';
+import { ProductListServiceService } from './services/product-list-service.service';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,9 @@ import { from } from 'rxjs';
   ],
   exports: [
     ProductComponent,
+  ],
+  providers: [
+    ProductListServiceService
   ]
 })
 export class ProductModule { }
