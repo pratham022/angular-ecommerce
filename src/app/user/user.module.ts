@@ -15,11 +15,13 @@ import { MatChipsModule } from '@angular/material/chips';
 
 import { HttpClientModule } from '@angular/common/http';
 import { LoginService } from './services/login.service';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     UserComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,

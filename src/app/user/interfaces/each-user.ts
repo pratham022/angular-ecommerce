@@ -16,8 +16,8 @@ export interface EachUser {
         }
     };
     phone: string;
-    website: string;
-    company: {
+    website?: string;
+    company?: {
         name: string;
         catchPhrase: string;
         bs: string;
