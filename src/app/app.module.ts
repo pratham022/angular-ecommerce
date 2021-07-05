@@ -7,19 +7,26 @@ import { AppComponent } from './app.component';
 import { ProductModule } from './product/product.module';
 import { UserModule } from './user/user.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MenuComponent } from './menu/menu.component';
+import { CheckUserService } from './services/check-user.service';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent,
+    HeaderComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,          // internally loads Core module
     AppRoutingModule,
     ProductModule,
     UserModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    CheckUserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,6 +8,7 @@ const sampleUsers: EachUser[] =
     username: "Bret",
     password: "pict@123",
     email: "Sincere@april.biz",
+    role: "user",
     address: {
       street: "Kulas Light",
       suite: "Apt. 556",
@@ -29,9 +30,10 @@ const sampleUsers: EachUser[] =
   {
     id: 2,
     name: "Ervin Howell",
-    username: "Antonette",
+    username: "Admin",
     password: "pict@123",
     email: "Shanna@melissa.tv",
+    role: "admin",
     address: {
       street: "Victor Plains",
       suite: "Suite 879",
@@ -56,6 +58,7 @@ const sampleUsers: EachUser[] =
     username: "Samantha",
     password: "pict@123",
     email: "Nathan@yesenia.net",
+    role: "user",
     address: {
       street: "Douglas Extension",
       suite: "Suite 847",
@@ -80,6 +83,7 @@ const sampleUsers: EachUser[] =
     username: "Karianne",
     password: "pict@123",
     email: "Julianne.OConner@kory.org",
+    role: "user",
     address: {
       street: "Hoeger Mall",
       suite: "Apt. 692",
@@ -104,6 +108,7 @@ const sampleUsers: EachUser[] =
     username: "Kamren",
     password: "pict@123",
     email: "Lucio_Hettinger@annie.ca",
+    role: "user",
     address: {
       street: "Skiles Walks",
       suite: "Suite 351",

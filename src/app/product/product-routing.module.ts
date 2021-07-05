@@ -14,6 +14,10 @@ const productRoutes: Routes = [
         ]
     },
 
+    {
+        path: '', redirectTo: '/products', pathMatch: 'full',
+    }
+
     // We need to add router-outlet to the parent component in order to render the child
 ];
 

@@ -36,7 +36,8 @@ import { LoginService } from './services/login.service';
     UserComponent
   ],
   providers: [
-    LoginService
+    LoginService                // Only 1 Login service instance will be used by all the components of this module
+    
   ]
 })
 export class UserModule { }

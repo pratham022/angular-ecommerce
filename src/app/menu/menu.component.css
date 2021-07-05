@@ -1,0 +1,25 @@
+ul {
+    list-style-type: none;                      /* Remove default list style in ul */
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: currentColor;                        /* use the nearest defined color */
+    text-decoration: none;                      /* We do not want any underline under our links */
+
+}
+
+.navbar {
+    height: 70px;
+    width: 100%;
+    background: #353535;;                  /* background is shorthand to combine many background tags into one line.*/
+    color: white;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}

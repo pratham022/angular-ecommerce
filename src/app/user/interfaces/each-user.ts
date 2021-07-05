@@ -4,6 +4,7 @@ export interface EachUser {
     username: string;
     password: string;
     email: string;
+    role: string;
     address?: {
         street: string;
         suite: string;

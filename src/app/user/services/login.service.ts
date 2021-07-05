@@ -25,7 +25,10 @@ export class LoginService {
 
     // check if valid user or not
     let obj = this.allUsers.find(o => o.username === userName);
-    if(obj?.password == password) return true;
+    if(obj?.password == password) {
+      localStorage.setItem("user", JSON.stringify(obj));
+      return true;
+    }
     return false;
   }
 }
