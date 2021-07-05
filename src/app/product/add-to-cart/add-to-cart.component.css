@@ -1,0 +1,19 @@
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    margin: 5px;
+}
+
+.btn-qty {
+    background: white;
+}

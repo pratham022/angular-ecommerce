@@ -12,3 +12,10 @@ img {
     justify-content: flex-start;
     align-items: center;
 }
+
+a {
+    margin: 3px;
+}
+.link-holder {
+    display: flex;
+}

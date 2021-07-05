@@ -27,6 +27,6 @@ import { HeaderComponent } from './header/header.component';
   providers: [
     CheckUserService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

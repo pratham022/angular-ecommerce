@@ -1,6 +1,6 @@
 <ul class="basic-grid">
     <div class="card" *ngFor="let product of productsArr">
-        <app-product-item [item]="product"></app-product-item>
+        <app-product-item [item]="product" [isLoggedIn]="isLoggedIn" [isAdmin]="isAdmin"></app-product-item>
     </div>
     
 </ul>

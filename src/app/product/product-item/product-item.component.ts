@@ -9,6 +9,9 @@ import { ProductItem } from '../interfaces/product-item';
 export class ProductItemComponent implements OnInit {
 
   @Input() item: ProductItem;
+  @Input() isLoggedIn: boolean;
+  @Input() isAdmin: boolean;
+
   constructor() { 
 
     // initialise the variable
@@ -23,6 +26,8 @@ export class ProductItemComponent implements OnInit {
       numReviews: 0,
       rating: 0
     }
+    this.isLoggedIn = false;
+    this.isAdmin = false;
   }
 
   ngOnInit(): void {

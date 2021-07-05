@@ -1,0 +1,20 @@
+<div class="outer-container">
+    <div class="button-container">
+        <button class="btn btn-minus" mat-mini-fab color="accent" 
+                aria-label="Example icon button with a plus one icon" 
+                (click)="decrementItem()">
+            <mat-icon>exposure_neg_1</mat-icon> 
+        </button>
+
+        <button class="btn btn-qty" mat-stroked-button color="accent">{{ curr }}</button>
+        
+        <button class="btn btn-plus" mat-mini-fab color="accent" 
+                aria-label="Example icon button with a plus one icon"
+                (click)="incrementItem()">
+            <mat-icon>plus_one</mat-icon>
+        </button>
+    </div>
+    <button mat-raised-button color="primary" (click)="updateCart()">Save</button>
+</div>
+
+

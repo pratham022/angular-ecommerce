@@ -5,17 +5,20 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
+import { CartComponent } from './cart/cart.component';
 const productRoutes: Routes = [
     {   path: 'products', component: ProductComponent,
         children: [
             {path: '', component: ProductListComponent},
-            {path: 'detail/:id', component: ProductDetailComponent}
-            
+            {path: 'detail/:id', component: ProductDetailComponent},
         ]
     },
 
     {
         path: '', redirectTo: '/products', pathMatch: 'full',
+    },
+    {
+        path: 'cart', component: CartComponent
     }
 
     // We need to add router-outlet to the parent component in order to render the child

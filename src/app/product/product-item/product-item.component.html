@@ -2,7 +2,10 @@
     <img src="{{ item.image }}">
     <p>{{ item.name }}</p>
     <p>{{ item.brand }}</p>
-    <a mat-raised-button color="primary" [routerLink]="['detail', item._id]">Details</a>
+    <div class="link-holder">
+        <a mat-raised-button color="primary" [routerLink]="['detail', item._id]">Details</a>
+        <a *ngIf="isLoggedIn && !isAdmin" mat-raised-button color="accent" [routerLink]="['detail', item._id]">Add To Cart</a>
+    </div>
 </div>
 
 

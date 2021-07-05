@@ -1,12 +1,16 @@
+<h1 *ngIf="isEmpty">Cart is Empty</h1>
+
 <div class="card-container">
-    <div class="card">
+    <div *ngFor="let product of cart" class="card">
         <img src="{{ product.image }}">
         <p>{{ product.name }}</p>
         <p>Brand: {{ product.brand }}</p>
         <p>Info: {{ product.description.substring(0, 45) }}...</p>
         <p>Category: {{ product.category }}</p>
-        <h4>Price:  $ {{ product.price }}</h4>
-        <p>Max-Quantity: {{ cntInStock }}</p>
-        <app-add-to-cart *ngIf="isLoggedIn && !isAdmin" [obj]="product" (update)="setNewDetails($event)"></app-add-to-cart>
+        <h4>Price:  $ {{ product.price * product.countInStock }}</h4>
+        <app-add-to-cart [obj]="product"></app-add-to-cart>
     </div>
 </div>
+<hr>
+<h1>Total: {{ totalCost }}</h1>
+
