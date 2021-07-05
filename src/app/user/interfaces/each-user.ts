@@ -2,6 +2,8 @@ export interface EachUser {
     id: number;
     name: string;
     username: string;
+    password: string;
+    email: string;
     address?: {
         street: string;
         suite: string;
