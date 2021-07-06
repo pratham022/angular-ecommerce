@@ -25,6 +25,8 @@ export class MenuComponent implements OnInit {
     this.checkUserService.getUserNameObserv().subscribe(newUserName => {
       this.userName = newUserName;
       this.isLoggedIn = true;
+      if(this.checkUserService.isAdminUser())
+      this.isAdmin = true;
     })
     
   }

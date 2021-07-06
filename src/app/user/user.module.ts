@@ -18,12 +18,14 @@ import { LoginService } from './services/login.service';
 import { ProfileComponent } from './profile/profile.component';
 
 import { CheckUserService } from '../services/check-user.service';
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   declarations: [
     UserComponent,
     LoginComponent,
     ProfileComponent,
+    UserListComponent,
   ],
   imports: [
     CommonModule,
