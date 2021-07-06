@@ -17,11 +17,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginService } from './services/login.service';
 import { ProfileComponent } from './profile/profile.component';
 
+import { CheckUserService } from '../services/check-user.service';
+
 @NgModule({
   declarations: [
     UserComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
   ],
   imports: [
     CommonModule,
@@ -32,14 +34,14 @@ import { ProfileComponent } from './profile/profile.component';
     MatCheckboxModule, 
     MatChipsModule,
     UserRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   exports: [
     UserComponent
   ],
   providers: [
-    LoginService                // Only 1 Login service instance will be used by all the components of this module
-    
+    LoginService,               // Only 1 Login service instance will be used by all the components of this module
+    CheckUserService
   ]
 })
 export class UserModule { }

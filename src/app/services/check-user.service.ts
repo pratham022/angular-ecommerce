@@ -1,11 +1,16 @@
 import { Injectable } from '@angular/core';
+import { Subject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CheckUserService {
 
-  constructor() { }
+  // check user service will be used by menu comp and login comp
+
+  subject = new Subject<string>();      // 1. define subject
+  constructor() {
+   }
 
   isLoggedIn(): boolean  {
 
@@ -36,9 +41,19 @@ export class CheckUserService {
         return obj?.username;
       }
       else  
-        return '';
+        return 'Guest';
     }
     else  
-      return ''
+      return 'Guest'
   }
+
+  setUserName(username: string) {
+    // add to the subject stream of values
+    this.subject.next(username);
+  }
+
+  getUserNameObserv(): Observable<string> {
+    return this.subject.asObservable();
+  }
+
 }

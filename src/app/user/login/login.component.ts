@@ -4,6 +4,7 @@ import { EachUser } from '../interfaces/each-user';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
+import { CheckUserService } from 'src/app/services/check-user.service';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   });
 
 
-  constructor(private loginService: LoginService, private router: Router) { 
+  constructor(private loginService: LoginService, private router: Router, private checkUserService: CheckUserService) { 
   }
 
   ngOnInit(): void {
@@ -33,6 +34,10 @@ export class LoginComponent implements OnInit {
 
       // check is login is valid
       if(this.loginService.isValidLogin(userName, password)) {
+
+        this.checkUserService.setUserName(userName);
+        
+
         console.log("Login Success");
         this.router.navigate(['products']);
       } else {

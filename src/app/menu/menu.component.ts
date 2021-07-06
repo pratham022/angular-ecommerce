@@ -19,21 +19,31 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(this.checkUserService.isLoggedIn())
-      this.isLoggedIn = true;
-    if(this.checkUserService.isAdminUser())
-      this.isAdmin = true;
-    this.setUserName();
+    this.updateMenuBar();
+    this.checkUserService.getUserNameObserv().subscribe(newUserName => {
+      this.userName = newUserName;
+    })
     
   }
 
   setUserName(): void {
     this.userName = this.checkUserService.getUserName();
-    console.log(this.userName)
+    console.log(this.userName);
   }
   logoutUser(): void {
     localStorage.removeItem("user");
     this.router.navigate(['login']);
+    this.isLoggedIn = this.checkUserService.isLoggedIn();
+    this.setUserName();
+  }
+
+  updateMenuBar() {
+    console.log("Updating");
+    if(this.checkUserService.isLoggedIn())
+      this.isLoggedIn = true;
+    if(this.checkUserService.isAdminUser())
+      this.isAdmin = true;
+    this.setUserName();
   }
 
 }
