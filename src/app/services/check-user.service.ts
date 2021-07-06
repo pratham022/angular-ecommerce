@@ -47,13 +47,13 @@ export class CheckUserService {
       return 'Guest'
   }
 
-  setUserName(username: string) {
-    // add to the subject stream of values
+  setUserName(username: string) {             // called by login component
+    //2. add to the subject stream of values
     this.subject.next(username);
   }
 
   getUserNameObserv(): Observable<string> {
-    return this.subject.asObservable();
-  }
+    return this.subject.asObservable();       // 3. return observable
+  } 
 
 }

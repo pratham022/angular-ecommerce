@@ -20,8 +20,11 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateMenuBar();
+
+    // 4. Subscribe to the observable
     this.checkUserService.getUserNameObserv().subscribe(newUserName => {
       this.userName = newUserName;
+      this.isLoggedIn = true;
     })
     
   }
