@@ -9,6 +9,8 @@
         
         <ng-template #logOut>
             <li class="nav-item"><app-header [userName]="userName"></app-header></li>
+            <li *ngIf="isLoggedIn && isAdmin" class="nav-item"><a routerLink="inventory">Inventory</a></li>
+            <li *ngIf="isLoggedIn && !isAdmin"><a routerLink="cart">Cart</a></li>
             <li class="nav-item"><a routerLink="profile">Profile</a></li>
             <li class="nav-item"><a routerLink="#" (click)="logoutUser()">Logout</a></li>
         </ng-template>

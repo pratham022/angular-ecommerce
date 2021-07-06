@@ -13,6 +13,10 @@ import { from } from 'rxjs';
 import { ProductListServiceService } from './services/product-list-service.service';
 import { CartComponent } from './cart/cart.component';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
+import { InventoryComponent } from './inventory/inventory.component';
+import { InventoryDetailComponent } from './inventory-detail/inventory-detail.component';
+
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,13 +25,16 @@ import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
     ProductDetailComponent,
     ProductComponent,
     CartComponent,
-    AddToCartComponent
+    AddToCartComponent,
+    InventoryComponent,
+    InventoryDetailComponent
   ],
   imports: [
     CommonModule,
     MatButtonModule,
     ProductRoutingModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
   exports: [
     ProductComponent,

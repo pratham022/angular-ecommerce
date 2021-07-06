@@ -1,0 +1,5 @@
+<div class="card-container">
+    <div *ngFor="let product of productsArr" class="card">
+        <app-inventory-detail [product]="product" (updateList)="updateProductsList($event)"></app-inventory-detail>
+    </div>
+</div>

@@ -6,6 +6,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
 import { CartComponent } from './cart/cart.component';
+import { InventoryComponent } from './inventory/inventory.component';
 const productRoutes: Routes = [
     {   path: 'products', component: ProductComponent,
         children: [
@@ -19,6 +20,9 @@ const productRoutes: Routes = [
     },
     {
         path: 'cart', component: CartComponent
+    },
+    {
+        path: 'inventory', component: InventoryComponent
     }
 
     // We need to add router-outlet to the parent component in order to render the child

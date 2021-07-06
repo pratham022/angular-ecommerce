@@ -1,0 +1,11 @@
+<div class="wrapper-div">
+    <img src="{{ product.image }}">
+    <p>{{ product.name }}</p>
+    <h4>Price: </h4>
+    <input [(ngModel)]="price">
+    <h4>Qty: </h4>
+    <input [(ngModel)]="countInStock">
+    <button mat-raised-button color="primary" (click)="saveProduct()">Save</button>
+    <button mat-raised-button color="warn" (click)="deleteProduct()">Delete Prod</button>
+</div>
+
